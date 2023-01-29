@@ -1,1 +1,4 @@
 //Mapear entidades aqui
+
+//Planilha onde estão sendo feitas o mapeamento das estruturas
+https://docs.google.com/spreadsheets/d/1ImaE-1om2BuwLhI-oEcKmy-KR1hrUiHKxg0SPgIsy4Q/edit#gid=0
