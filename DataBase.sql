@@ -30,7 +30,7 @@ CREATE TABLE Orgao (
 
 CREATE TABLE Licitacao (
   Num_Licitacao INT,
-  Num_Processo INT,
+  Num_Processo VARCHAR(200),
   Data_Resultado DATE NOT NULL,
   Data_Abertura DATE NOT NULL,
   Valor_Licitacao DECIMAL(10,2) NOT NULL,
@@ -41,13 +41,18 @@ CREATE TABLE Licitacao (
   FOREIGN KEY (Cod_Orgao) REFERENCES Orgao (Cod_Orgao)
 );
 
+ALTER TABLE Licitacao
+ADD Municipio VARCHAR(255),
+ADD UF CHAR(2),
+ADD Situacao VARCHAR(30);
+
 CREATE TABLE Empenhos_Relacionados (
   Cod_Empenho INT PRIMARY KEY,
   Data_Emissao_Empenho DATE NOT NULL,
   Obs_Empenho VARCHAR(100),
   Valor_Empenho DECIMAL(10, 2) NOT NULL,
   Num_Licitacao INT,
-  Num_Processo INT,
+  Num_Processo VARCHAR(200),
   FOREIGN KEY (Num_Licitacao, Num_Processo) REFERENCES Licitacao (Num_Licitacao, Num_Processo)
 );
 
@@ -59,7 +64,7 @@ CREATE TABLE Participantes (
 CREATE TABLE Participantes_Licitacao (
   Cod_Participante INT,
   Num_Licitacao INT,
-  Num_Processo INT,
+  Num_Processo VARCHAR(200),
   Flag_Vencedor BOOLEAN,
   PRIMARY KEY (Cod_Participante, Num_Licitacao, Num_Processo),
   FOREIGN KEY (Cod_Participante) REFERENCES Participantes (Cod_Participante),
@@ -81,7 +86,7 @@ CREATE TABLE Item (
 
 CREATE TABLE Item_Licitacao (
   Cod_Item_Compra INT,
-  Num_Processo INT,
+  Num_Processo VARCHAR(200),
   Num_Licitacao INT,
   Cod_Modalidade_Compra INT,
   PRIMARY KEY (Cod_Item_Compra, Num_Processo, Num_Licitacao),
