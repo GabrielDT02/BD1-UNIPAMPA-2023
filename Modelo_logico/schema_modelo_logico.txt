@@ -1,0 +1,71 @@
+Unidade_Gestora
+--
+Cod_UG INT
+Nome_UG VARCHAR(50)
+
+Orgao_Superior
+--
+Cod_Orgao_Superior INT
+Nome_Orgao_Superior VARCHAR(50)
+
+Orgao
+--
+Cod_Orgao INT
+Nome_Orgao VARCHAR(50)
+Cod_Orgao_Superior INT FK >- Orgao_Superior.Cod_Orgao_Superior
+
+Licitacao
+--
+Num_Processo INT PK
+Num_Licitacao INT PK
+Data_Resultado DATE
+Data_Abertura DATE
+Valor_Licitacao DECIMAL(10,2)
+Cod_UG INT FK >- Unidade_Gestora.Cod_UG
+Cod_Orgao INT FK >- Orgao.Cod_Orgao
+municipio VARCHAR(255)
+uf VARCHAR(2)
+
+Empenhos_Relacionados
+--
+Cod_Empenho INT
+Data_Emissao_Empenho DATE
+Obs_Empenho VARCHAR(100)
+Valor_Empenho DECIMAL(10,2)
+Num_Processo INT FK >- Licitacao.Num_Processo
+Num_Licitacao INT FK >- Licitacao.Num_Licitacao
+
+
+Participantes
+--
+Cod_Participante INT
+Nome_Participante VARCHAR(100)
+
+Participantes_Licitacao
+--
+Cod_Participante INT PK FK >- Participantes.Cod_Participante
+Num_Processo INT PK FK >- Licitacao.Num_Processo
+Num_Licitacao INT PK FK >- Licitacao.Num_Licitacao
+Flag_Vencedor BOOLEAN
+
+Modalidade_Compra
+--
+Cod_Modalidade_Compra INT
+Modalidade_Compra VARCHAR(100)
+
+Item
+--
+Cod_Item_Compra INT
+Objeto VARCHAR(100)
+Descricao_Item VARCHAR(100)
+Valor_Item DECIMAL(10,2)
+Qtd_Item INT
+
+Item_Licitacao
+--
+Cod_Item_Compra INT PK FK >- Item.Cod_Item_Compra
+Num_Processo INT PK FK >- Licitacao.Num_Processo
+Num_Licitacao INT PK FK >- Licitacao.Num_Licitacao
+Cod_Modalidade_Compra INT FK >- Modalidade_Compra.Cod_Modalidade_Compra
+
+
