@@ -33,13 +33,16 @@ CREATE TABLE Licitacao (
   Num_Processo VARCHAR(200),
   Data_Resultado DATE NOT NULL,
   Data_Abertura DATE NOT NULL,
-  Valor_Licitacao DECIMAL(10,2) NOT NULL,
+  Valor_Licitacao DECIMAL(20,2) NOT NULL,
   Cod_UG INT NOT NULL,
   Cod_Orgao INT NOT NULL,
   PRIMARY KEY (Num_Licitacao, Num_Processo),
   FOREIGN KEY (Cod_UG) REFERENCES Unidade_Gestora (Cod_UG),
   FOREIGN KEY (Cod_Orgao) REFERENCES Orgao (Cod_Orgao)
 );
+
+ALTER TABLE Licitacao
+ALTER COLUMN Valor_Licitacao SET DATA TYPE DECIMAL(20,2);
 
 ALTER TABLE Licitacao
 ADD Municipio VARCHAR(255),
@@ -56,13 +59,20 @@ CREATE TABLE Empenhos_Relacionados (
   FOREIGN KEY (Num_Licitacao, Num_Processo) REFERENCES Licitacao (Num_Licitacao, Num_Processo)
 );
 
+ALTER TABLE Empenhos_Relacionados
+ALTER COLUMN Cod_Empenho SET DATA TYPE VARCHAR(300);
+
+ALTER TABLE Empenhos_Relacionados
+ALTER COLUMN Obs_Empenho SET DATA TYPE VARCHAR(500);
+
 CREATE TABLE Participantes (
-  Cod_Participante INT PRIMARY KEY,
+  Cod_Participante VARCHAR(200) PRIMARY KEY,
   Nome_Participante VARCHAR(100) NOT NULL
 );
 
+
 CREATE TABLE Participantes_Licitacao (
-  Cod_Participante INT,
+  Cod_Participante VARCHAR(200),
   Num_Licitacao INT,
   Num_Processo VARCHAR(200),
   Flag_Vencedor BOOLEAN,
@@ -84,6 +94,13 @@ CREATE TABLE Item (
   Qtd_Item INT NOT NULL
 );
 
+ALTER TABLE Item
+ALTER COLUMN Objeto SET DATA TYPE VARCHAR(400);
+ALTER TABLE Item
+ALTER COLUMN Descricao_Item SET DATA TYPE VARCHAR(400);
+ALTER TABLE Item
+ALTER COLUMN Valor_Item SET DATA TYPE DECIMAL(20,2);
+
 CREATE TABLE Item_Licitacao (
   Cod_Item_Compra INT,
   Num_Processo VARCHAR(200),
@@ -95,6 +112,8 @@ CREATE TABLE Item_Licitacao (
   FOREIGN KEY (Cod_Modalidade_Compra) REFERENCES Modalidade_Compra(Cod_Modalidade_Compra)
 );
 
+ALTER TABLE Item_Licitacao
+ALTER COLUMN Cod_Item_Compra SET DATA TYPE VARCHAR(200);
 
 
 
