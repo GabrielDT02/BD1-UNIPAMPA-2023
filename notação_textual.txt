@@ -1,0 +1,47 @@
+Item(Cod_Item_Compra(PK), Objeto, Descricao_Item, Valor_Item, Qtd_Item)
+
+
+
+Unidade_Gestora(Cod_Ug(PK), Nome_UG)
+
+
+
+Orgao_Superior(Cod_Orgao_Superior(PK), Nome_Orgao_Superior)
+
+
+
+Orgao(Cod_Orgao(PK), Nome_Orgao, Cod_Orgao_Superior)
+Cod_Orgao_Superior referencia Orgao_Superior
+
+
+
+Licitacao(Num_Processo(PK), Num_Licitacao(PK), Data_Resultado, Data_Abertura, Valor_Licitacao, Cod_UG, Cod_Orgao, municipio, UF)
+Cod_UG referencia Unidade_Gestora
+Cod_Orgao referencia Orgao
+
+
+
+Modalidade_Compra(Cod_Modalidade_Compra(PK), Modalidade_Compra)
+
+
+
+Item_Licitacao(Cod_Item_Compra(PK), Num_Processo(PK), Num_Licitacao(PK), Cod_Modalidade_Compra)
+Cod_Item_Compra referencia Item
+Num_Processo e Num_Licitacao referenciam Licitacao
+Cod_Modalidade_Compra referencia Modalidade_Compra
+
+
+
+Participantes(Cod_Participante(PK), Nome_Participante)
+
+
+
+Participantes_Licitacao(Cod_Participante(PK), Num_Processo(PK), Num_Licitacao(PK), Flag_Vencedor)
+Cod_Participante referencia Participantes
+Num_Processo e Num_Licitacao referenciam Licitacao
+
+
+
+Empenhos_Relacionados(Cod_Empenho(PK), Data_Emissao_Empenho, Obs_Empenho, Valor_Empenho, Num_Processo, Num_Licitacao)
+Num_Processo e Num_Licitacao referenciam Licitacao
+

@@ -1,0 +1,16 @@
+
+
+Projeto de Banco de dados 4º edição - Carlos Alberto Heuser - Abordagem Relacional - páginas 75--76
+
+Projeto de Banco de dados 4º edição - Carlos Alberto Heuser - Engenharia reversa - páginas 119--120
+
+Sistema de Banco de Dados 6º edição  - Navathe - Conceitos e arquitetura do sistema de banco de dados - páginas 24--25
+
+Projeto de Banco de dados 4º edição - Carlos Alberto Heuser - Introdução - páginas 5--6
+
+Projeto de Banco de dados 4º edição - Carlos Alberto Heuser - Abordagem Entidade-Relacionamento - páginas 11--13
+
+
+//No artigo vou referenciar os dois livros inteiros
+
+
