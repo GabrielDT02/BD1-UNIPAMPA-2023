@@ -9,10 +9,11 @@ Escolhemos uma base de dados pública do governo para fazer esse processo de nor
 
 
 ## Modelo Entidade Relacionamento
-[Modelo ER](Modelos/ModeloER.png) <br/>
+<img src="Modelos/ModeloER.png" >
+<br/>
 
 ## Modelo Lógico
-[Modelo logico](Modelos/ModeloLogico.png)
+<img src="Modelos/ModeloLogico.png" >
 
 [Relatório final](relatorio.pdf)
 [Apresentação de slides](slides.pdf)
