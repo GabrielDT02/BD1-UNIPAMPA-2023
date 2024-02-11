@@ -15,6 +15,8 @@ Escolhemos uma base de dados pública do governo para fazer esse processo de nor
 ## Modelo Lógico
 <img src="Modelos/ModeloLogico.png" >
 
+<iframe src="relatorio.pdf" width="100%" height="600px"></iframe>
+
 [Relatório final](relatorio.pdf)
 [Apresentação de slides](slides.pdf)
 
