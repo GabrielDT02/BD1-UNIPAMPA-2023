@@ -6,6 +6,12 @@ Este repositório documenta um trabalho da faculdade focado na seleção de um b
 Escolhemos uma base de dados pública do governo para fazer esse processo de normalização <br/>
 [Clique aqui para ver a base de dados](https://portaldatransparencia.gov.br/pagina-interna/603389-dicionario-de-dados-licitacoes)
 
+[Clique aqui](slides.pdf) para ver a apresentação de slides
+<br/>
+ou
+<br/>
+[Clique aqui](slides.pdf) para ver o relatorio final com uma análise um poco mais detalhada sobre o que foi feito no trabalho
+
 
 
 ## Modelo Entidade Relacionamento
@@ -15,8 +21,6 @@ Escolhemos uma base de dados pública do governo para fazer esse processo de nor
 ## Modelo Lógico
 <img src="Modelos/ModeloLogico.png" >
 
-<img src="relatorio.pdf" >
 
-[Relatório final](relatorio.pdf)
-[Apresentação de slides](slides.pdf)
+
 
