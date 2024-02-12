@@ -11,7 +11,7 @@ Escolhemos uma base de dados pública do governo para fazer esse processo de nor
 <br/>
 ou
 <br/>
-[Clique aqui](slides.pdf) para ver o relatorio final com uma análise um poco mais detalhada sobre o que foi feito no trabalho
+[Clique aqui](relatorio.pdf) para ver o relatorio final com uma análise um poco mais detalhada sobre o que foi feito no trabalho
 
 <br/><br/>
 
