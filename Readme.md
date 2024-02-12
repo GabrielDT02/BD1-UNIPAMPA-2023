@@ -5,6 +5,7 @@ Este repositório documenta um trabalho da faculdade focado na seleção de um b
 ## Base de Dados Escolhida
 Escolhemos uma base de dados pública do governo para fazer esse processo de normalização <br/>
 [Clique aqui para ver a base de dados](https://portaldatransparencia.gov.br/pagina-interna/603389-dicionario-de-dados-licitacoes)
+<br/><br/>
 
 [Clique aqui](slides.pdf) para ver a apresentação de slides
 <br/>
@@ -12,6 +13,7 @@ ou
 <br/>
 [Clique aqui](slides.pdf) para ver o relatorio final com uma análise um poco mais detalhada sobre o que foi feito no trabalho
 
+<br/><br/>
 
 
 ## Modelo Entidade Relacionamento
